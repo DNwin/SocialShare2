@@ -14,6 +14,7 @@
 		95ADDC9B1B7DF1EC001F170E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95ADDC9A1B7DF1EC001F170E /* Images.xcassets */; };
 		95ADDC9E1B7DF1EC001F170E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95ADDC9C1B7DF1EC001F170E /* LaunchScreen.xib */; };
 		95ADDCAA1B7DF1EC001F170E /* SocialShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95ADDCA91B7DF1EC001F170E /* SocialShareTests.m */; };
+		95ADDCB41B7DF2E4001F170E /* IMG_0089.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95ADDCB31B7DF2E4001F170E /* IMG_0089.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		95ADDCA31B7DF1EC001F170E /* SocialShareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialShareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95ADDCA81B7DF1EC001F170E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95ADDCA91B7DF1EC001F170E /* SocialShareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialShareTests.m; sourceTree = "<group>"; };
+		95ADDCB31B7DF2E4001F170E /* IMG_0089.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0089.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				95ADDC921B7DF1EC001F170E /* AppDelegate.m */,
 				95ADDC941B7DF1EC001F170E /* ViewController.h */,
 				95ADDC951B7DF1EC001F170E /* ViewController.m */,
+				95ADDCB31B7DF2E4001F170E /* IMG_0089.jpg */,
 				95ADDC971B7DF1EC001F170E /* Main.storyboard */,
 				95ADDC9A1B7DF1EC001F170E /* Images.xcassets */,
 				95ADDC9C1B7DF1EC001F170E /* LaunchScreen.xib */,
@@ -199,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95ADDCB41B7DF2E4001F170E /* IMG_0089.jpg in Resources */,
 				95ADDC991B7DF1EC001F170E /* Main.storyboard in Resources */,
 				95ADDC9E1B7DF1EC001F170E /* LaunchScreen.xib in Resources */,
 				95ADDC9B1B7DF1EC001F170E /* Images.xcassets in Resources */,

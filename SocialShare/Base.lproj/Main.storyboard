@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3De-nC-tRS">
+                                <rect key="frame" x="111" y="411" width="341" height="113"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text"> Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared.  Text to be shared. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="IMG_0089.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tto-lT-fJE">
+                                <rect key="frame" x="96" y="40" width="408" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="cWB-at-D4M"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0Y-YC-RNq">
+                                <rect key="frame" x="96" y="544" width="68" height="30"/>
+                                <state key="normal" title="Action">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWo-EO-FOT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyR-Ak-NPR">
+                                <rect key="frame" x="199" y="544" width="46" height="30"/>
+                                <state key="normal" title="Tweet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-eg-lTs">
+                                <rect key="frame" x="265" y="544" width="77" height="30"/>
+                                <state key="normal" title="Share FB">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3De-nC-tRS" secondAttribute="trailing" constant="5" id="0XB-dQ-Pa3"/>
+                            <constraint firstItem="Y0Y-YC-RNq" firstAttribute="top" secondItem="3De-nC-tRS" secondAttribute="bottom" constant="20" id="4gb-WY-m1q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y0Y-YC-RNq" secondAttribute="bottom" constant="26" id="6I2-TV-HUr"/>
+                            <constraint firstItem="BEn-eg-lTs" firstAttribute="leading" secondItem="YyR-Ak-NPR" secondAttribute="trailing" constant="20" id="9RF-Iz-wUz"/>
+                            <constraint firstItem="Y0Y-YC-RNq" firstAttribute="centerY" secondItem="YyR-Ak-NPR" secondAttribute="centerY" id="Ohp-av-60Q"/>
+                            <constraint firstItem="YyR-Ak-NPR" firstAttribute="leading" secondItem="Y0Y-YC-RNq" secondAttribute="trailing" constant="35" id="YwB-oA-EJU"/>
+                            <constraint firstItem="tto-lT-fJE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="dry-0E-qAJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tto-lT-fJE" secondAttribute="trailing" id="g97-kN-R9O"/>
+                            <constraint firstItem="Y0Y-YC-RNq" firstAttribute="centerY" secondItem="BEn-eg-lTs" secondAttribute="centerY" id="h6h-uk-BRn"/>
+                            <constraint firstItem="Y0Y-YC-RNq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="102" id="oRr-Ck-FMu"/>
+                            <constraint firstItem="3De-nC-tRS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="p2Q-lW-JwM"/>
+                            <constraint firstItem="tto-lT-fJE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="tSE-qj-NJb"/>
+                            <constraint firstItem="3De-nC-tRS" firstAttribute="top" secondItem="tto-lT-fJE" secondAttribute="bottom" constant="5" id="vCg-I0-30e"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="Y0Y-YC-RNq" id="FKg-C8-2hj"/>
+                        <outlet property="imageView" destination="tto-lT-fJE" id="txM-DQ-LoD"/>
+                        <outlet property="textView" destination="3De-nC-tRS" id="gAd-Ud-gxI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_0089.jpg" width="2448" height="3264"/>
+    </resources>
 </document>

@@ -10,18 +10,31 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *actionButton;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *tweetButton;
+@property (weak, nonatomic) IBOutlet UIButton *fbButton;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+}
+
+- (IBAction)actionTapped:(id)sender {
+    
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.textView.text] applicationActivities:nil];
+    [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
 @end
