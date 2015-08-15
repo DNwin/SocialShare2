@@ -39,17 +39,23 @@
                                     <action selector="actionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWo-EO-FOT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyR-Ak-NPR">
-                                <rect key="frame" x="199" y="544" width="46" height="30"/>
-                                <state key="normal" title="Tweet">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-eg-lTs">
-                                <rect key="frame" x="265" y="544" width="77" height="30"/>
+                                <rect key="frame" x="193" y="544" width="77" height="30"/>
                                 <state key="normal" title="Share FB">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="socialTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EfY-lm-GjC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyR-Ak-NPR">
+                                <rect key="frame" x="309" y="544" width="46" height="30"/>
+                                <state key="normal" title="Tweet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="socialTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ENf-dK-EGy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -71,8 +77,10 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="Y0Y-YC-RNq" id="FKg-C8-2hj"/>
+                        <outlet property="fbButton" destination="BEn-eg-lTs" id="ywL-Tw-lv6"/>
                         <outlet property="imageView" destination="tto-lT-fJE" id="txM-DQ-LoD"/>
                         <outlet property="textView" destination="3De-nC-tRS" id="gAd-Ud-gxI"/>
+                        <outlet property="tweetButton" destination="YyR-Ak-NPR" id="hH6-dM-uQp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

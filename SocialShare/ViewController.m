@@ -7,6 +7,14 @@
 //
 
 #import "ViewController.h"
+@import Social;
+
+// Used to easily check tags of buttons
+typedef NS_ENUM(NSInteger, SocialButtonTags) {
+    SocialButtonTagFacebook,
+    SocialButtonTagTwitter
+    // SocialButtonTagSinaWeibo,
+};
 
 @interface ViewController ()
 
@@ -25,9 +33,51 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (IBAction)socialTapped:(id)sender {
+    NSString *serviceType = @"";
+    
+    // Set service type depending on which button is pressed
+    switch (((UIButton *)sender).tag) {
+        case SocialButtonTagFacebook:
+            serviceType = SLServiceTypeFacebook;
+            break;
+        case SocialButtonTagTwitter:
+            serviceType = SLServiceTypeTwitter;
+            break;
+        default:
+            break;
+    }
+    
+    // Present an alert if chosen social account isn't found
+    if (![SLComposeViewController isAvailableForServiceType:serviceType]) {
+        [self showUnavailableAlertForServiceType: serviceType];
+    } else {
+        SLComposeViewController *composeViewController = [SLComposeViewController composeViewControllerForServiceType:serviceType];
+        
+        [composeViewController addImage:self.imageView.image];
+        
+        NSString *initialTextString = [NSString stringWithFormat:@"Info: %@", self.textView.text];
+        [composeViewController setInitialText:initialTextString];
+        
+        [self presentViewController:composeViewController animated:YES completion:nil];
+    }
+    
+}
 
+- (void)showUnavailableAlertForServiceType:(NSString *)serviceType {
+    NSString *serviceName = @"";
+    
+    if (serviceType == SLServiceTypeFacebook) {
+        serviceName = @"Facebook";
+    } else if (serviceType == SLServiceTypeTwitter) {
+        serviceName = @"Twitter";
+    }
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Account" message:[NSString stringWithFormat:@"Please go to the device Settings and add a %@ account in order to share through that service.", serviceName]  preferredStyle:UIAlertControllerStyleAlert];
+    
+    // Add a cancel button
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:nil]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (IBAction)actionTapped:(id)sender {
