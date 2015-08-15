@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "SocialActivity.h"
 @import Social;
+@import QuartzCore;
 
 // Used to easily check tags of buttons
 typedef NS_ENUM(NSInteger, SocialButtonTags) {
@@ -52,6 +54,7 @@ typedef NS_ENUM(NSInteger, SocialButtonTags) {
     if (![SLComposeViewController isAvailableForServiceType:serviceType]) {
         [self showUnavailableAlertForServiceType: serviceType];
     } else {
+        // Compose a social post using text from textview and image.
         SLComposeViewController *composeViewController = [SLComposeViewController composeViewControllerForServiceType:serviceType];
         
         [composeViewController addImage:self.imageView.image];
@@ -81,9 +84,12 @@ typedef NS_ENUM(NSInteger, SocialButtonTags) {
 }
 
 - (IBAction)actionTapped:(id)sender {
+    SocialActivity *socialActivity = [[SocialActivity alloc] init];
     
+    NSString *initialTextString = [NSString stringWithFormat:@"Text: %@", self.textView.text];
     
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.textView.text] applicationActivities:nil];
+    // Send image and text to activity view controller with a custom activity;
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.imageView.image, initialTextString] applicationActivities:@[socialActivity]];
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
