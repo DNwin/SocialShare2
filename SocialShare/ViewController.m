@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "SocialActivity.h"
 @import Social;
-@import QuartzCore;
 
 // Used to easily check tags of buttons
 typedef NS_ENUM(NSInteger, SocialButtonTags) {
